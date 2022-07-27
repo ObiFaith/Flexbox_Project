@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+body{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1, h2{  
+    margin-top: 0;  
+    font-family: 'Oswald', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    margin: 0;
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 5em;
+    padding: .3em 1.5em;
+    background: #a59b78;
+}
+.btn:focus, .btn:hover{
+    border: 2px solid #a59b78;
+    padding: .2em 1.4em;
+    background: #2e323f;
+    color: #fff;
+}
+.nav_toggle:hover, .nav_toggle:focus{
+    opacity: 0.8;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+header{
+    padding: 1.1rem 0;
+    text-align: center;
+}
+
+header, aside .col, footer{    
+    background: #2e323f;
+}
+
+.nav{
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav_visible{
+    visibility: visible;
+    height: auto;
+}
+
+.nav_toggle{
+    width: 3em;
+    height: 3em;
+    background: #a59b78;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+.hamburger{
+    width: 50%;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: '';
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    display: block;
+    background: #fff;
+    height: 3px;
+    margin: 0 auto;
+}
+
+.hamburger::before{
+    transform: translateY(-6px);
+}
+
+.hamburger::after{
+    transform: translateY(3px);
+}
+
+.nav_list{
+    margin-top: 1.8rem;
+}
+
+.nav_item + .nav_item{
+    margin-top: .8rem;
+}
+
+.nav_link, .cta{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.cta:hover, .cta:focus{
+    background: #3b4050;
+}
+.hero{
+    background: #3b4050;
+    padding: 5.5rem 0;
+}
+
+.hero h1{
+    font-size: 2.667em;
+    line-height: 1.2;
+}
+
+.hero span, h2{
+    color: #b3957d;
+}
+
+.section_two{
+    background: #f3f3f5;
+}
+
+.section_two, .section_three, footer{
+    color: #6f737f;
+    padding: 5rem 0 4rem;
+}
+
+aside .col{
+    text-align: center;
+    padding: 2rem;
+}
+
+aside .col + .col{
+    margin-top: 1.5rem;
+}
+
+.section_three img{
+    margin: 0 0 2em;
+}
+
+.nav_link, footer h2{
+    font-stretch: semi-condensed;
+}
+
+.btn, .nav_link, aside .col, aside .col h2, footer h1, 
+.footer_link:hover, .footer_link:focus{
+    color: #fff;
+}
+
+.btn:hover, .btn:focus, .nav_toggle, .footer_link:hover, .footer_link:focus{
+    cursor: pointer;
+}
+
+footer, .footer_link{
+    color: #9598a7;
+}
+
+footer h2{
+    margin-top: 1.4rem;
+}
+
+
+@media (min-width: 700px){
+    .hero_content, footer p{
+        width: 80%;
+    }
+    .hero h1{
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+    .nav_row, .nav, .nav_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav{
+        height: auto;
+        visibility: visible;
+    }
+    .nav_toggle{
+        display: none;
+    }
+    .nav_item + .nav_item, .nav_list{
+        margin: 0;
+    }
+    .nav_item + .nav_item, .nav_list + .nav_list{
+        margin-left: 1em;
+    }
+    .nav_link, footer h2{
+        font-stretch: condensed;
+    }
+    .cta{
+        font-size: 1.2em;
+    }
+    .sec_row{        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+    }
+    aside .sec_row{
+        flex-direction: column;
+    }
+    aside .col + .col{
+        margin: 0 0 0 2em;
+    }
+}
+
+@media (min-width: 1000px){
+    .hero h1{
+        font-size: 5rem;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .col{
+        width: 100%;
+    }
+    .col + .col{
+        margin-left: 3em;
+    }
+    .hero_content{
+        width: 100%;
+    }
+    .nav_list{
+        display: flex;
+        align-items: center;
+    }
+    .nav_item + .nav_item{
+        margin-left: 1em;
+    }
+    .nav_link, footer h2{
+        font-stretch: normal;
+    }
+    .hero_text{
+        font-size: 1.3125rem;        
+        align-self: flex-end;
+    }
+    aside .col + .col{
+        margin: 2em 0 0;
+    }
+    .sec_row{
+        margin: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .section_two, footer h1{
+        text-align: center;
+    }
+    footer h2{
+        margin-top: 0;
+    }
+    footer .col + .col{
+        width: 35%;
+        margin-left: 2em;
+    }
+}
